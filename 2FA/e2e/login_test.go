@@ -47,10 +47,6 @@ func loginWith2FA(ctx *godog.ScenarioContext) {
 		return nil
 	})
 
-	ctx.Step(`^the response on /login code should be (\d+)$`, func(statusCode int) error {
-		response.Status(statusCode)
-		return nil
-	})
 
 	ctx.Step(`^the response on /login should match json:$`, func(expectedJSON *godog.DocString) error {
 		response.JSON().Object().IsEqual(map[string]interface{}{
