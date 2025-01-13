@@ -40,7 +40,7 @@ func resetPasswordWith2FA(ctx *godog.ScenarioContext) {
 	ctx.Step(`^User send "([^"]*)" request to "([^"]*)"$`, func(method, endpoint string) error {
 		response = expectReset.Request(method, endpoint).
 			WithJSON(map[string]string{
-				"email":       "hamzatilyasov2003@gmail.com",
+				"email":       "paulpa2003@gmail.com",
 				"oldPassword": "123123",
 			}).
 			Expect()
@@ -58,7 +58,7 @@ func resetPasswordWith2FA(ctx *godog.ScenarioContext) {
 	ctx.Step(`^user send "([^"]*)" request to "([^"]*)"$`, func(method, endpoint string) error {
 		response = expectReset.Request(method, endpoint).
 			WithJSON(map[string]string{
-				"email":       "hamzatilyasov2003@gmail.com",
+				"email":       "paulpa2003@gmail.com",
 				"code":        "123456",
 				"newPassword": "123",
 			}).Expect()

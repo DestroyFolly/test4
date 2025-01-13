@@ -17,9 +17,6 @@ var (
 	verificationCodes = make(map[string]string)
 )
 
-//func init() {
-//adminEmail =
-//}
 
 func LoginHandler(c *gin.Context) {
 	var request struct {
